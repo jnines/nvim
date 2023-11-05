@@ -32,7 +32,7 @@ o.smartcase = true
 
 o.relativenumber = true
 o.number = true
-o.numberwidth = 3
+-- o.numberwidth = 3
 -- Effectively Relative/Sign/Number, but that normal combo is wonk
-o.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s%l"
-o.laststatus = 3
+--[[ o.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s%l"
+o.laststatus = 3 ]]

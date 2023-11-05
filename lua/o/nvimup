@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd /tmp || exit
+echo "Downloading"
+/usr/bin/wget "https://github.com/neovim/neovim/releases/download/stable/nvim.appimage" &&
+	/usr/bin/wget "https://github.com/neovim/neovim/releases/download/stable/nvim.appimage.sha256sum" &&
+	echo "Comparing sha256sum" &&
+	/usr/bin/sha256sum -c nvim.appimage.sha256sum &&
+	echo "Moving and setting permissions"
+sudo /usr/bin/mv nvim.appimage /usr/local/bin/ &&
+	sudo /usr/bin/chmod +x /usr/local/bin/nvim.appimage &&
+	if [ ! -L /usr/local/bin/nvim ]; then
+		sudo ln -s /usr/local/bin/nvim.appimage /usr/local/bin/nvim
+	fi
+
+echo "Done"
