@@ -10,9 +10,6 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-vim.opt.numberwidth = 4
-vim.opt.statuscolumn = ""
-vim.opt.laststatus = 3
 
 require("lazy").setup({ { import = "s.plugins" }, { import = "s.plugins.lsp" } }, {
 	install = {

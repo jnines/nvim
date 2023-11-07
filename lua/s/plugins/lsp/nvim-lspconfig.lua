@@ -4,7 +4,6 @@ return {
 	dependencies = {
 		"folke/neodev.nvim",
 		"hrsh7th/cmp-nvim-lsp",
-		"b0o/schemastore.nvim",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
@@ -35,7 +34,6 @@ return {
 		end
 
 		local capabilities = cmp_nvim_lsp.default_capabilities()
-		local schemas = require("schemastore")
 
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 		for type, icon in pairs(signs) do
@@ -53,21 +51,6 @@ return {
 			on_attach = on_attach,
 		})
 
-		lspconfig.tsserver.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		lspconfig.cssls.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		lspconfig.tailwindcss.setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
 		lspconfig.emmet_ls.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
@@ -79,45 +62,11 @@ return {
 		})
 
 		lspconfig.jsonls.setup({
-			settings = {
-				json = {
-					schemas = schemas.json.schemas(),
-					validate = { enable = true },
-				},
-			},
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
 		lspconfig.yamlls.setup({
-			settings = {
-				yaml = {
-					schemaStore = { enable = false, url = "" },
-					schemas = schemas.yaml.schemas(),
-				},
-			},
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		lspconfig.lua_ls.setup({
-			settings = {
-				Lua = {
-					diagnostics = {
-						globals = { "vim" },
-					},
-					workspace = {
-						library = { vim.env.VIMRUNTIME },
-						checkThirdParty = false,
-					},
-					telemetry = {
-						enable = false,
-					},
-					completion = {
-						callSnipper = "Replace",
-					},
-				},
-			},
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})

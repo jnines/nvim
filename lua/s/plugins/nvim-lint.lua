@@ -6,18 +6,10 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			markdown = { "vale" },
-			html = { "vale" },
-			php = { "php" },
 			yaml = { "yamllint" },
 			javascript = { "eslint" },
 			json = { "jsonlint" },
-			typescript = { "eslint" },
-			javascriptreact = { "eslint" },
-			typescriptreact = { "eslint" },
 			bash = { "shellcheck" },
-			python = { "flake8" },
-			lua = { "luacheck" },
 		}
 
 		lint.linters.luacheck.args = {
