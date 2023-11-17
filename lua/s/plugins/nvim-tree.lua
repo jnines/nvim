@@ -31,6 +31,11 @@ return {
 			git = {
 				ignore = false,
 			},
+			tab = {
+				sync = {
+					open = true,
+				},
+			},
 		})
 
 		local km = vim.keymap
