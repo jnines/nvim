@@ -42,6 +42,7 @@ return {
 				"jsonlint",
 				"stylua",
 				"yamllint",
+				"markdownlint",
 			},
 		})
 	end,

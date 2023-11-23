@@ -6,8 +6,8 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			markdown = { "vale" },
-			html = { "vale" },
+			markdown = { "markdownlint" },
+			html = { "markdownlint" },
 			yaml = { "yamllint" },
 			javascript = { "eslint" },
 			json = { "jsonlint" },

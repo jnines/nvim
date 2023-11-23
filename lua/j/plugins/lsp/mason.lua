@@ -50,6 +50,7 @@ return {
 				"black",
 				"pylint",
 				"yamllint",
+				"markdownlint",
 			},
 		})
 	end,
