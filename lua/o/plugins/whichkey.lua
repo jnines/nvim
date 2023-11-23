@@ -14,6 +14,7 @@ return {
 
 		wk.register({
 			["<leader>b"] = { name = "Buffers" },
+			["<leader>c"] = { name = "Code" },
 			["<leader>e"] = { name = "File Tree" },
 			["<leader>d"] = { name = "Diagnostics" },
 			["<leader>f"] = { name = "File" },
