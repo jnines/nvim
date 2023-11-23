@@ -20,6 +20,7 @@ return {
 			["<leader>g"] = { name = "GoTo" },
 			["<leader>h"] = { name = "Harpoon" },
 			["<leader>i"] = { name = "Icons" },
+			["<leader>m"] = { name = "Markdown" },
 			["<leader>q"] = { "<cmd>xa<CR><cmd>qa<CR>", "Quit" },
 			["<leader>r"] = { name = "Rename" },
 			["<leader>s"] = { name = "Splits" },
