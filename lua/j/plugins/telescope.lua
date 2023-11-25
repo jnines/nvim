@@ -44,5 +44,6 @@ return {
 		km.set("n", "<leader>fp", "<cmd>Telescope project<cr>", { desc = "Find project" })
 		km.set("n", "<leader>bm", "<cmd>Telescope buffers<cr>", { desc = "Buffer menu" })
 		km.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { desc = "Find keymaps" })
+		km.set("n", "<leader>fw", "<cmd>Telescope grep_string<cr>", { desc = "Find word" })
 	end,
 }
