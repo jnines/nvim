@@ -42,5 +42,6 @@ return {
 		km.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor" })
 		km.set("n", "<leader>fs", "<cmd>Telescope spell_suggest<cr>", { desc = "Fix spelling" })
 		km.set("n", "<leader>fp", "<cmd>Telescope project<cr>", { desc = "Find project" })
+		km.set("n", "<leader>bm", "<cmd>Telescope buffers<cr>", { desc = "Buffer menu" })
 	end,
 }
