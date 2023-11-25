@@ -43,5 +43,6 @@ return {
 		km.set("n", "<leader>fs", "<cmd>Telescope spell_suggest<cr>", { desc = "Fix spelling" })
 		km.set("n", "<leader>fp", "<cmd>Telescope project<cr>", { desc = "Find project" })
 		km.set("n", "<leader>bm", "<cmd>Telescope buffers<cr>", { desc = "Buffer menu" })
+		km.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { desc = "Find keymaps" })
 	end,
 }
