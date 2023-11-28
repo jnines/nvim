@@ -4,11 +4,6 @@ return {
 	config = function()
 		local term = require("toggleterm")
 
-		vim.opt_local.relativenumber = false
-		vim.opt_local.number = false
-		vim.opt_local.signcolumn = "no"
-		vim.opt_local.statuscolumn = ""
-
 		term.setup({
 			open_mapping = "<c-\\>",
 			size = 8,
