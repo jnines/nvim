@@ -45,10 +45,7 @@ return {
 			sections = {
 				lualine_c = {
 					{ "filesize" },
-					{
-						"filename",
-						path = 1,
-					},
+					{ "filename" },
 				},
 				lualine_x = {
 					{
@@ -62,11 +59,11 @@ return {
 				},
 			},
 			winbar = {
-				lualine_a = { "filename", harpoon_line },
+				lualine_a = { { "filename", path = 1 }, harpoon_line },
 				lualine_z = { "hostname" },
 			},
 			inactive_winbar = {
-				lualine_a = { "filename", harpoon_line },
+				lualine_a = { { "filename", path = 1 }, harpoon_line },
 				lualine_z = { "hostname" },
 			},
 			extensions = { "lazy" },
