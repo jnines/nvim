@@ -24,6 +24,7 @@ return {
 			["<leader>q"] = { "<cmd>xa<CR><cmd>qa<CR>", "Quit" },
 			["<leader>r"] = { name = "Rename" },
 			["<leader>s"] = { name = "Splits" },
+			["<leader>t"] = { name = "Tabs" },
 			["<leader>x"] = { name = "Extras" },
 		})
 	end,
