@@ -18,6 +18,7 @@ return {
 			["<leader>e"] = { name = "File Tree" },
 			["<leader>d"] = { name = "Diagnostics" },
 			["<leader>f"] = { name = "File" },
+			["<leader>G"] = { ":LazyGit<CR>", "Git" },
 			["<leader>g"] = { name = "GoTo" },
 			["<leader>h"] = { name = "Harpoon" },
 			["<leader>i"] = { name = "Icons" },
