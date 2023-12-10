@@ -16,6 +16,7 @@ return {
 
 		local on_attach = function(_, bufnr)
 			vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+			vim.diagnostic.config({ update_in_insert = true })
 			local km = vim.keymap
 
 			km.set("n", "<leader>gR", "<cmd>Telescope lsp_references<CR>", { desc = "Goto references" })
