@@ -35,6 +35,7 @@ return {
 				"yamlls",
 				"lua_ls",
 				"marksman",
+				"gopls",
 			},
 			automatic_installation = true,
 		})
@@ -51,6 +52,8 @@ return {
 				"pylint",
 				"yamllint",
 				"markdownlint",
+				"golangci-lint",
+				"gofumpt",
 			},
 		})
 	end,

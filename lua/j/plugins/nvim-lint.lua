@@ -16,7 +16,7 @@ return {
 			javascriptreact = { "eslint" },
 			typescriptreact = { "eslint" },
 			bash = { "shellcheck" },
-			go = { "golangci-lint" },
+			go = { "golangcilint" },
 			python = { "flake8" },
 			lua = { "luacheck" },
 		}
