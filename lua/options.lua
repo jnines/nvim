@@ -38,3 +38,5 @@ o.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnu
 o.laststatus = 3
 
 o.iskeyword:append("-")
+o.spelllang = "en_us"
+o.spell = true
