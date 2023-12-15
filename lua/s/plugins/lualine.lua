@@ -37,6 +37,7 @@ return {
 						"lir",
 						"Outline",
 						"spectre_panel",
+						"toggleterm",
 					},
 					NvimTree = {},
 				},
