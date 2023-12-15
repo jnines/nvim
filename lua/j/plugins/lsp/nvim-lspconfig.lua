@@ -138,7 +138,7 @@ return {
 			on_attach = on_attach,
 			settings = {
 				gopls = {
-					usePlaceholders = true,
+					usePlaceholders = false,
 					analyses = {
 						unusedparams = true,
 					},
