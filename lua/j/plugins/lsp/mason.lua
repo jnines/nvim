@@ -57,4 +57,5 @@ return {
 			},
 		})
 	end,
+	vim.keymap.set("n", "<leader>M", "<cmd>Mason<CR>", { desc = "Mason" }),
 }
