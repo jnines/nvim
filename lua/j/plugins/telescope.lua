@@ -40,6 +40,7 @@ return {
 		km.set("n", "<leader>fq", "<cmd>Telescope quickfix<cr>", { desc = "List Quickfix" })
 		km.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 		km.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor" })
+		km.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Find help tags" })
 		km.set("n", "<leader>fs", "<cmd>Telescope spell_suggest<cr>", { desc = "Fix spelling" })
 		km.set("n", "<leader>fp", "<cmd>Telescope project<cr>", { desc = "Find project" })
 		km.set("n", "<leader>bm", "<cmd>Telescope buffers<cr>", { desc = "Buffer menu" })
