@@ -19,6 +19,7 @@ km.set("n", "<leader>sk", "<C-w>k", { desc = "Move to split right" })
 km.set("n", "<leader>tl", vim.cmd.tabn, { desc = "Next tab" })
 km.set("n", "<leader>th", vim.cmd.tabp, { desc = "Previous tab" })
 km.set("n", "<leader>xo", vim.cmd.so, { desc = "Source file" })
+km.set("n", "<leader>xp", ":Lazy reload ", { desc = "Reload plugin" })
 km.set("n", "<leader>bn", vim.cmd.bn, { desc = "Buffer next" })
 km.set("n", "<leader>bp", vim.cmd.bp, { desc = "Buffer previous" })
 
