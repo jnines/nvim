@@ -20,6 +20,14 @@ return {
 				indent_markers = {
 					enable = true,
 				},
+				icons = {
+					glyphs = {
+						git = {
+							unstaged = "🚫",
+							ignored = "",
+						},
+					},
+				},
 			},
 			actions = {
 				open_file = {
