@@ -13,5 +13,6 @@ return {
 		vim.g.gruvbox_material_cursor_line_contrast = "higher"
 		vim.cmd("colorscheme gruvbox-material")
 		vim.api.nvim_set_hl(0, "Comment", { fg = "#8c8c8c" })
+		vim.api.nvim_set_hl(0, "SpellBad", { underline = true, sp = "DarkYellow" })
 	end,
 }
