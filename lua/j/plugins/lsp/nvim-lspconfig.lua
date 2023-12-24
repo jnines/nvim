@@ -14,7 +14,7 @@ return {
 
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-		local on_attach = function(_, bufnr)
+		local basic_on_attach = function(_, bufnr)
 			vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 			vim.diagnostic.config({ update_in_insert = true })
 			local km = vim.keymap
@@ -35,6 +35,16 @@ return {
 			km.set("n", "<leader>xx", ":LspRestart<CR>", { desc = "Restart LSP" })
 		end
 
+		local ts_on_attach = function(_, bufnr)
+			basic_on_attach(_, bufnr)
+			vim.keymap.set("n", "<leader>L", "<ESC>wbywoconsole.log()<ESC>hp", { desc = "Log under cursor" })
+		end
+
+		local go_on_attach = function(_, bufnr)
+			basic_on_attach(_, bufnr)
+			vim.keymap.set("n", "<leader>L", "<ESC>wbywofmt.Println()<ESC>hp", { desc = "Log under cursor" })
+		end
+
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 		local schemas = require("schemastore")
 
@@ -46,42 +56,42 @@ return {
 
 		lspconfig.bashls.setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = basic_on_attach,
 		})
 
 		lspconfig.html.setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = basic_on_attach,
 		})
 
 		lspconfig.tsserver.setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = ts_on_attach,
 		})
 
 		lspconfig.cssls.setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = basic_on_attach,
 		})
 
 		lspconfig.tailwindcss.setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = basic_on_attach,
 		})
 
 		lspconfig.graphql.setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = basic_on_attach,
 		})
 
 		lspconfig.emmet_ls.setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = basic_on_attach,
 		})
 
 		lspconfig.pyright.setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = basic_on_attach,
 		})
 
 		lspconfig.jsonls.setup({
@@ -92,7 +102,7 @@ return {
 				},
 			},
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = basic_on_attach,
 		})
 
 		lspconfig.yamlls.setup({
@@ -103,7 +113,7 @@ return {
 				},
 			},
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = basic_on_attach,
 		})
 
 		lspconfig.lua_ls.setup({
@@ -125,17 +135,17 @@ return {
 				},
 			},
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = basic_on_attach,
 		})
 
 		lspconfig.marksman.setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = basic_on_attach,
 		})
 
 		lspconfig.gopls.setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = go_on_attach,
 			settings = {
 				gopls = {
 					usePlaceholders = false,
