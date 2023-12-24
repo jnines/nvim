@@ -11,6 +11,8 @@ return {
 		},
 		config = function()
 			local treesitter = require("nvim-treesitter.configs")
+			local ts_autotag = require("nvim-ts-autotag")
+			ts_autotag.setup()
 
 			local tsctx = require("treesitter-context")
 
