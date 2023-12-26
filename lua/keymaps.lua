@@ -31,3 +31,8 @@ km.set("i", "!", "!<C-g>u", { desc = "Create undo breakpoint at !" })
 km.set("i", "?", "?<C-g>u", { desc = "Create undo breakpoint at ?" })
 km.set("i", "{", "{<C-g>u", { desc = "Create undo breakpoint at {" })
 km.set("i", "[", "[<C-g>u", { desc = "Create undo breakpoint at [" })
+
+km.set("n", "<m-left>", ":vertical resize +1<CR>", { desc = "Resize wider" })
+km.set("n", "<m-right>", ":vertical resize -1<CR>", { desc = "Resize narrower" })
+km.set("n", "<m-up>", ":resize +1<CR>", { desc = "Resize taller" })
+km.set("n", "<m-down>", ":resize -1<CR>", { desc = "Resize shorter" })
