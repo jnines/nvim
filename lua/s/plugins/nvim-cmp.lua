@@ -7,7 +7,7 @@ return {
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-emoji",
 		"hrsh7th/cmp-nvim-lua",
-		{ "L3MON4D3/LuaSnip", tag = "v2.*", run = "make install_jsregexp" },
+		{ "L3MON4D3/LuaSnip", version = "v2.*", run = "make install_jsregexp" },
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
 		"onsails/lspkind.nvim", -- vs-code pictograms
