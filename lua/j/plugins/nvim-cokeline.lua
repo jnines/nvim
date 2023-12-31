@@ -119,15 +119,17 @@ return {
 				},
 			},
 			components = {
+				components.space,
 				components.separator,
 				components.space,
 				components.unique_prefix,
 				components.devicon,
+				components.space,
 				components.filename,
 				components.diagnostics,
 				components.space,
-				components.close_or_unsaved,
 				components.space,
+				components.close_or_unsaved,
 			},
 		})
 		vim.keymap.set("n", "<leader>bx", function()
