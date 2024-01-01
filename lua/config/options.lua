@@ -19,6 +19,7 @@ o.backspace = "indent,eol,start"
 o.splitright = true
 o.splitbelow = true
 o.showmatch = true
+o.conceallevel = 0
 
 o.swapfile = false
 o.backup = false
