@@ -1,4 +1,3 @@
-require("options")
-require("keymaps")
--- Pick config
-require("j.lazy")
+require("config.options")
+require("config.keymaps")
+require("config.lazy")
