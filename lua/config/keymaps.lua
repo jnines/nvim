@@ -12,10 +12,9 @@ km.set({ "n", "x", "o" }, "<S-l>", "g_", { desc = "End of line" })
 
 km.set({ "n", "i" }, "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
 km.set({ "n", "i" }, "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
+km.set({ "n", "i" }, "<C-down>", "<ESC><S-v>yp", { desc = "Copy line down" })
 
 km.set("n", "Y", "Yg_", { desc = "Yank line without whitespace" })
-
-km.set("n", "<C-down>", "<S-v>yp", { desc = "Copy line down" })
 km.set("n", "<leader>sl", "<C-w>l", { desc = "Move to split right" })
 km.set("n", "<leader>sh", "<C-w>h", { desc = "Move to split left" })
 km.set("n", "<leader>sj", "<C-w>j", { desc = "Move to split down" })
