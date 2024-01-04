@@ -35,7 +35,8 @@ o.relativenumber = true
 o.number = true
 o.numberwidth = 5
 -- Effectively Relative/Sign/Number, but that normal combo is wonk
-o.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s%l "
+o.statuscolumn =
+	"%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s%l%{foldlevel(v:lnum) > foldlevel(v:lnum - 1) ? (foldclosed(v:lnum) == -1 ? '' : '⏵') : ' ' }"
 o.laststatus = 3
 
 o.iskeyword:append("-")
