@@ -7,8 +7,8 @@ km.set({ "n", "i", "v" }, "<C-q>", vim.cmd.q, { desc = "exit" })
 km.set({ "n", "i", "v" }, "<C-s>", "<Esc>:w<CR>", { desc = "Save Buffer" })
 km.set({ "n", "i", "v" }, "<C-z>", "<Esc>:wq<CR>", { desc = "Save Buffer and Exit" })
 
-km.set({ "n", "x", "o" }, "<S-h>", "^", { desc = "Start of line" })
-km.set({ "n", "x", "o" }, "<S-l>", "g_", { desc = "End of line" })
+km.set({ "n", "x", "o" }, "H", "^", { desc = "Start of line" })
+km.set({ "n", "x", "o" }, "L", "g_", { desc = "End of line" })
 
 km.set({ "n", "i" }, "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
 km.set({ "n", "i" }, "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
