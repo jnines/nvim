@@ -6,11 +6,8 @@ return {
 		local gs = require("gitsigns")
 
 		gs.setup({
-			signs = {
-				add = { text = "+" },
-				change = { text = "±" },
-				untracked = { text = "ü" },
-			},
+			numhl = true,
+			signcolumn = false,
 		})
 	end,
 }
