@@ -43,6 +43,7 @@ return {
 		local go_on_attach = function(_, bufnr)
 			basic_on_attach(_, bufnr)
 			vim.keymap.set("n", "<leader>L", "<ESC>wbywofmt.Println()<ESC>hp", { desc = "Log under cursor" })
+			vim.keymap.set("n", "<leader>ge", "oif err != nil {<enter>}<esc>Oreturn ", { desc = "Go Err" })
 		end
 
 		local capabilities = cmp_nvim_lsp.default_capabilities()
