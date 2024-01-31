@@ -9,5 +9,7 @@ return {
 			numhl = true,
 			signcolumn = false,
 		})
+		vim.keymap.set("n", "<leader>gb", gs.toggle_current_line_blame, { desc = "Git blame toggle" })
+		vim.keymap.set("n", "<leader>gp", gs.preview_hunk, { desc = "Git preview hunk" })
 	end,
 }
