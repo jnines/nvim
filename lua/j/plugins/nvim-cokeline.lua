@@ -20,8 +20,8 @@ return {
 			},
 
 			separator = {
-				text = function(buffer)
-					return buffer.index ~= 1 and "󱋱" or ""
+				text = function()
+					return "󰇝"
 				end,
 				truncation = { priority = 1 },
 			},
@@ -101,10 +101,10 @@ return {
 		cokeline.setup({
 			default_hl = {
 				fg = function(buffer)
-					return buffer.is_focused and get_hex("Normal", "fg") or get_hex("Comment", "fg")
+					return buffer.is_focused and get_hex("Directory", "fg") or get_hex("Comment", "fg")
 				end,
-				bg = function()
-					return get_hex("ColorColumn", "bg")
+				bg = function(buffer)
+					return buffer.is_focused and get_hex("TabLine", "bg") or get_hex("ColorColumn", "bg")
 				end,
 			},
 			sidebar = {
@@ -123,7 +123,6 @@ return {
 				},
 			},
 			components = {
-				components.space,
 				components.separator,
 				components.space,
 				components.devicon,
@@ -134,6 +133,8 @@ return {
 				components.space,
 				components.space,
 				components.close_or_unsaved,
+				components.space,
+				components.separator,
 			},
 		})
 		vim.keymap.set("n", "<leader>bp", function()
