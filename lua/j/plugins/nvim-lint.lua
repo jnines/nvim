@@ -7,7 +7,6 @@ return {
 
 		lint.linters_by_ft = {
 			markdown = { "markdownlint" },
-			html = { "markdownlint" },
 			php = { "php" },
 			yaml = { "yamllint" },
 			javascript = { "eslint" },
