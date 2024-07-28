@@ -5,28 +5,30 @@ return {
 		local wk = require("which-key")
 
 		wk.setup({
-			key_labels = {
-				["<tab>"] = "TAB",
-				["<space>"] = "SPC",
-				["<leader>"] = "SPC",
+			replace = {
+				key = {
+					{ "<tab>", "TAB" },
+					{ "<space>", "SPC" },
+					{ "<leader>", "SPC" },
+				},
 			},
 		})
 
-		wk.register({
-			["<leader>b"] = { name = "Buffers" },
-			["<leader>c"] = { name = "Code" },
-			["<leader>e"] = { name = "File Tree" },
-			["<leader>d"] = { name = "Diagnostics" },
-			["<leader>f"] = { name = "File" },
-			["<leader>G"] = { ":Lazygit<CR>", "Git" },
-			["<leader>g"] = { name = "GoTo" },
-			["<leader>h"] = { name = "Harpoon" },
-			["<leader>i"] = { name = "Icons" },
-			["<leader>q"] = { "<cmd>xa<CR><cmd>qa<CR>", "Quit" },
-			["<leader>r"] = { name = "Rename" },
-			["<leader>s"] = { name = "Splits" },
-			["<leader>t"] = { name = "Tabs" },
-			["<leader>x"] = { name = "Extras" },
+		wk.add({
+			{ "<leader>G", ":LazyGit<CR>", desc = "Git" },
+			{ "<leader>b", group = "Buffers" },
+			{ "<leader>c", group = "Code" },
+			{ "<leader>d", group = "Diagnostics" },
+			{ "<leader>e", group = "File Tree" },
+			{ "<leader>f", group = "File" },
+			{ "<leader>g", group = "GoTo" },
+			{ "<leader>h", group = "Harpoon" },
+			{ "<leader>i", group = "Icons" },
+			{ "<leader>q", "<cmd>xa<CR><cmd>qa<CR>", desc = "Quit" },
+			{ "<leader>r", group = "Rename" },
+			{ "<leader>s", group = "Splits" },
+			{ "<leader>t", group = "Tabs" },
+			{ "<leader>x", group = "Extras" },
 		})
 	end,
 }
