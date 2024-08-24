@@ -160,5 +160,11 @@ return {
 				},
 			},
 		})
+
+		lspconfig.qmlls.setup({
+			cmd = { "qmlls6" },
+			capabilities = capabilities,
+			on_attach = basic_on_attach,
+		})
 	end,
 }
