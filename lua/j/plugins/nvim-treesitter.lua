@@ -40,6 +40,8 @@ return {
 					"dockerfile",
 					"gitignore",
 					"go",
+					"qmljs",
+					"qmldir",
 					"query",
 				},
 				incremental_selection = {
