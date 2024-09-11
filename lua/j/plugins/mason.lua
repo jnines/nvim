@@ -25,7 +25,7 @@ return {
 			ensure_installed = {
 				"bashls",
 				"html",
-				"tsserver",
+				"ts_ls",
 				"cssls",
 				"tailwindcss",
 				"graphql",
