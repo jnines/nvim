@@ -45,7 +45,7 @@ return {
 			sections = {
 				lualine_c = {
 					{ "filesize" },
-					{ "filename" },
+					{ "filename", path = 3 },
 				},
 				lualine_x = {
 					{
