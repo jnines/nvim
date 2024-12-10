@@ -27,6 +27,7 @@ return {
 					hidden_files = true,
 					sync_with_nvim_tree = true,
 				},
+				fzf = {},
 			},
 		})
 
