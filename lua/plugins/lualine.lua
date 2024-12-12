@@ -24,7 +24,7 @@ return {
 
 		lualine.setup({
 			options = {
-				theme = "gruvbox-material",
+				theme = "auto",
 				disabled_filetypes = {
 					statusline = { "alpha", "NvimTree" },
 					winbar = {
