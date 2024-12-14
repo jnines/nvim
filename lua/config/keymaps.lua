@@ -10,9 +10,9 @@ km.set({ "n", "i", "v" }, "<C-z>", "<Esc>:wq<CR>", { desc = "Save Buffer and Exi
 km.set({ "n", "x", "o" }, "H", "^", { desc = "Start of line" })
 km.set({ "n", "x", "o" }, "L", "g_", { desc = "End of line" })
 
-km.set({ "n", "i" }, "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
-km.set({ "n", "i" }, "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
-km.set({ "n", "i" }, "<C-down>", "<ESC><S-v>yp", { desc = "Copy line down" })
+km.set({ "n", "i" }, "<C-K>", ":m .-2<CR>==", { desc = "Move line up" })
+km.set({ "n", "i" }, "<C-J>", ":m .+1<CR>==", { desc = "Move line down" })
+km.set({ "n", "i" }, "<C-Y>", "<ESC><S-v>yp", { desc = "Copy line down" })
 
 km.set("n", "Y", "Yg_", { desc = "Yank line without whitespace" })
 km.set("n", "<leader>sl", "<C-w>l", { desc = "Move to split right" })
