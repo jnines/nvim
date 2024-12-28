@@ -14,5 +14,6 @@ return {
 		vim.cmd("colorscheme gruvbox-material")
 		vim.api.nvim_set_hl(0, "Comment", { fg = "#8c8c8c" })
 		vim.api.nvim_set_hl(0, "SpellBad", { underline = true, sp = "DarkYellow" })
+		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	end,
 }
