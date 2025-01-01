@@ -6,6 +6,7 @@ return {
 		"nvim-tree/nvim-web-devicons",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-telescope/telescope-project.nvim",
+		"debugloop/telescope-undo.nvim",
 	},
 	config = function()
 		local telescope = require("telescope")
@@ -28,6 +29,14 @@ return {
 					sync_with_nvim_tree = true,
 				},
 				fzf = {},
+				undo = {
+					side_by_side = true,
+					layout_strategy = "vertical",
+					layout_config = {
+						preview_height = 0.9,
+					},
+					saved_only = true,
+				},
 			},
 		})
 
@@ -47,5 +56,6 @@ return {
 		km.set("n", "<leader>bm", "<cmd>Telescope buffers<cr>", { desc = "Buffer menu" })
 		km.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { desc = "Find keymaps" })
 		km.set("n", "<leader>fw", "<cmd>Telescope grep_string<cr>", { desc = "Find word" })
+		km.set("n", "<leader>u", "<cmd>Telescope undo<cr>", { desc = "Undo Tree" })
 	end,
 }
