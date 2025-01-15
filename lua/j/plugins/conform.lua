@@ -30,9 +30,13 @@ return {
 				end
 				return { timeout_ms = 1000, lsp_format = "fallback" }
 			end,
+
 			formatters = {
 				prettier = {
 					prepend_args = { "--single-quote", "--jsx-single-quote" },
+				},
+				shfmt = {
+					args = { "-bn" },
 				},
 			},
 		})

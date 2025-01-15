@@ -30,8 +30,12 @@ return {
 				prettier = {
 					prepend_args = { "--single-quote", "--jsx-single-quote" },
 				},
+				shfmt = {
+					args = { "-bn" },
+				},
 			},
 		})
+
 		vim.keymap.set({ "n", "v" }, "<leader>,", function()
 			conform.format({
 				timeout_ms = 1000,
