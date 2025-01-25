@@ -3,7 +3,8 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"folke/neodev.nvim",
-		"hrsh7th/cmp-nvim-lsp",
+		-- "hrsh7th/cmp-nvim-lsp",
+		"saghen/blink.cmp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
@@ -11,7 +12,7 @@ return {
 
 		local lspconfig = require("lspconfig")
 
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		local blink = require("blink.cmp")
 
 		local basic_on_attach = function(_, bufnr)
 			vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -39,8 +40,7 @@ return {
 			vim.keymap.set("n", "<leader>L", "<ESC>wbywoconsole.log()<ESC>hp", { desc = "Log under cursor" })
 		end
 
-		local capabilities = cmp_nvim_lsp.default_capabilities()
-
+		local capabilities = blink.get_lsp_capabilities()
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 		for type, icon in pairs(signs) do
 			local hl = "DiagnosticSign" .. type
