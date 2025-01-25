@@ -93,7 +93,9 @@ return {
 				accept = { auto_brackets = { enabled = true } },
 			},
 			fuzzy = {
-				use_typo_resistance = false,
+				max_typos = function()
+					return 0
+				end,
 			},
 			keymap = {
 				["<CR>"] = { "accept", "fallback" },
