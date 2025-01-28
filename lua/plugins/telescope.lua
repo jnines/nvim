@@ -7,6 +7,7 @@ return {
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-telescope/telescope-project.nvim",
 		"debugloop/telescope-undo.nvim",
+		"allaman/emoji.nvim",
 	},
 	config = function()
 		local telescope = require("telescope")
@@ -42,6 +43,7 @@ return {
 
 		telescope.load_extension("fzf")
 		telescope.load_extension("project")
+		telescope.load_extension("emoji")
 
 		local km = vim.keymap
 
@@ -57,5 +59,6 @@ return {
 		km.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { desc = "Find keymaps" })
 		km.set("n", "<leader>fw", "<cmd>Telescope grep_string<cr>", { desc = "Find word" })
 		km.set("n", "<leader>u", "<cmd>Telescope undo<cr>", { desc = "Undo Tree" })
+		km.set("n", "<leader>fe", "<cmd>Telescope emoji<cr>", { desc = "Emojis" })
 	end,
 }
