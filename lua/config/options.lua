@@ -21,6 +21,7 @@ o.splitbelow = true
 o.showmatch = true
 o.conceallevel = 0
 o.cursorline = true
+o.colorcolumn = "120"
 
 o.swapfile = false
 o.backup = false
