@@ -104,7 +104,9 @@ return {
 				["<C-k>"] = { "scroll_documentation_up", "fallback" },
 				["<C-j>"] = { "scroll_documentation_down", "fallback" },
 				["<C-e>"] = { "cancel" },
-				cmdline = {
+			},
+			cmdline = {
+				keymap = {
 					["<cr>"] = {
 						function(cmp)
 							return cmp.accept({
