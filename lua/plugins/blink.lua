@@ -84,7 +84,7 @@ return {
 				documentation = {
 					auto_show = true,
 					auto_show_delay_ms = 100,
-					update_delay_ms = 10,
+					update_delay_ms = 50,
 					window = {
 						border = "rounded",
 						winhighlight = "Normal:Normal,FloatBorder:None,EndOfBuffer:BlinkCmpDoc",
