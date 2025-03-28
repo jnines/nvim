@@ -12,6 +12,7 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
+		local uactions = require("telescope-undo.actions")
 
 		telescope.setup({
 			defaults = {
@@ -34,9 +35,21 @@ return {
 					side_by_side = true,
 					layout_strategy = "vertical",
 					layout_config = {
-						preview_height = 0.9,
+						preview_height = 0.7,
 					},
 					saved_only = true,
+					mappings = {
+						i = {
+							["<cr>"] = uactions.yank_additions,
+							["<C-y>"] = uactions.yank_deletions,
+							["<C-r>"] = uactions.restore,
+						},
+						n = {
+							["y"] = uactions.yank_additions,
+							["Y"] = uactions.yank_deletions,
+							["u"] = uactions.restore,
+						},
+					},
 				},
 			},
 		})
@@ -44,6 +57,7 @@ return {
 		telescope.load_extension("fzf")
 		telescope.load_extension("project")
 		telescope.load_extension("emoji")
+		telescope.load_extension("undo")
 
 		local km = vim.keymap
 
