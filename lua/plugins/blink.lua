@@ -106,6 +106,9 @@ return {
 				["<C-e>"] = { "cancel" },
 			},
 			cmdline = {
+				completion = {
+					menu = { auto_show = true },
+				},
 				keymap = {
 					["<cr>"] = {
 						function(cmp)
