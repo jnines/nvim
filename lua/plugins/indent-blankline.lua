@@ -2,7 +2,7 @@ return {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		dependencies = {
-			"hiphish/rainbow-delimiters.nvim",
+			{ "hiphish/rainbow-delimiters.nvim", submodules = false },
 			"nvim-treesitter/nvim-treesitter",
 		},
 		event = { "BufReadPre", "BufNewFile" },
