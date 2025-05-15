@@ -25,6 +25,17 @@ return {
 					},
 				},
 			},
+			pickers = {
+				find_files = {
+					find_command = { "rg", "--files", "--iglob", "!.git", "!node_modules", "--hidden" },
+				},
+				grep_string = {
+					additional_args = { "--hidden" },
+				},
+				live_grep = {
+					additional_args = { "--hidden" },
+				},
+			},
 			extensions = {
 				project = {
 					hidden_files = true,
