@@ -27,13 +27,13 @@ return {
 			},
 			pickers = {
 				find_files = {
-					find_command = { "rg", "--files", "--iglob", "!.git", "!node_modules", "--hidden" },
+					additional_args = { "--iglob", "!.git/", "--iglob", "!node_modules", "--hidden" },
 				},
 				grep_string = {
-					additional_args = { "--hidden" },
+					additional_args = { "--iglob", "!.git/", "--iglob", "!node_modules", "--hidden" },
 				},
 				live_grep = {
-					additional_args = { "--hidden" },
+					additional_args = { "--iglob", "!.git/", "--iglob", "!node_modules", "--hidden" },
 				},
 			},
 			extensions = {
