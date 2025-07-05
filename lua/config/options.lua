@@ -37,8 +37,16 @@ o.relativenumber = true
 o.number = true
 o.numberwidth = 5
 -- Effectively Relative/Sign/Number, but that normal combo is wonk
-o.statuscolumn =
-	"%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s%l%{foldlevel(v:lnum) > foldlevel(v:lnum - 1) ? (foldclosed(v:lnum) == -1 ? '' : '⏵') : ' ' }"
+o.statuscolumn = table.concat({
+	-- relnum bumped out so gutter doesn't move
+	"%{v:virtnum < 1 ? printf('%3d', v:relnum) : '   '}",
+	-- signs
+	" %s",
+	-- absnum bumped out to 1000'th
+	"%{v:virtnum < 1 ? printf('%3d', v:lnum) : '   '}",
+	-- folds
+	"%{foldlevel(v:lnum) > foldlevel(v:lnum - 1) ? (foldclosed(v:lnum) == -1 ? '' : '⏵') : ' '}",
+})
 o.laststatus = 3
 
 o.iskeyword:append("-")
