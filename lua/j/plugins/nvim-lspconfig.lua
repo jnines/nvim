@@ -2,22 +2,19 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		"folke/neodev.nvim",
 		-- "hrsh7th/cmp-nvim-lsp",
 		"saghen/blink.cmp",
 		"b0o/schemastore.nvim",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
-		require("neodev").setup()
-
 		local lspconfig = require("lspconfig")
 
 		local blink = require("blink.cmp")
 
 		local basic_on_attach = function(_, bufnr)
 			vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-			-- vim.diagnostic.config({ update_in_insert = true })
+			vim.diagnostic.config({ virtual_lines = { current_line = true } })
 			local km = vim.keymap
 
 			km.set("n", "<leader>gR", "<cmd>Telescope lsp_references<CR>", { desc = "Goto references" })
