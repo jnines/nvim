@@ -48,6 +48,7 @@ o.statuscolumn = table.concat({
 	"%{foldlevel(v:lnum) > foldlevel(v:lnum - 1) ? (foldclosed(v:lnum) == -1 ? '' : '⏵') : ' '}",
 })
 o.laststatus = 3
+o.winborder = "rounded"
 
 o.iskeyword:append("-")
 o.spelllang = "en_us"
