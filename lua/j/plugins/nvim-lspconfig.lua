@@ -13,7 +13,7 @@ return {
 		local blink = require("blink.cmp")
 
 		local basic_on_attach = function(_, bufnr)
-			vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+			-- vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 			vim.diagnostic.config({ virtual_lines = { current_line = true } })
 			local km = vim.keymap
 
@@ -27,8 +27,9 @@ return {
 			km.set("v", "<leader>rs", 'y:%s/<C-r>"//<left>', { desc = "Rename section" })
 			km.set("n", "<leader>db", "<cmd>Telescope diagnostics bufnr=0<CR>", { desc = "Buffer diagnostics" })
 			km.set("n", "<leader>dl", vim.diagnostic.open_float, { desc = "Line diagnostics" })
-			km.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Goto previous diagnostic" })
-			km.set("n", "]d", vim.diagnostic.goto_next, { desc = "Goto next diagnostic" })
+			-- km.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Goto previous diagnostic" })
+			-- km.set("n", "[d", "<cmd>vim.diagnostic.jump({count=-1})<CR>", { desc = "Goto previous diagnostic" })
+			-- km.set("n", "]d", vim.diagnostic.goto_next, { desc = "Goto next diagnostic" })
 			km.set("n", "K", vim.lsp.buf.hover, { desc = "Selection documentation" })
 			km.set("n", "<leader>xx", ":LspRestart<CR>", { desc = "Restart LSP" })
 		end
