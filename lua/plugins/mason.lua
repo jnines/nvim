@@ -31,7 +31,6 @@ return {
 				"yamlls",
 				"marksman",
 			},
-			automatic_installation = true,
 		})
 
 		mason_tool_installer.setup({
