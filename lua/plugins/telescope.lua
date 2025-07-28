@@ -85,5 +85,10 @@ return {
 		km.set("n", "<leader>fw", "<cmd>Telescope grep_string<cr>", { desc = "Find word" })
 		km.set("n", "<leader>u", "<cmd>Telescope undo<cr>", { desc = "Undo Tree" })
 		km.set("n", "<leader>fe", "<cmd>Telescope emoji<cr>", { desc = "Emojis" })
+		km.set("n", "<leader>gR", "<cmd>Telescope lsp_references<CR>", { desc = "Goto references" })
+		km.set("n", "<leader>gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "Goto definitions" })
+		km.set("n", "<leader>gi", "<cmd>Telescope lsp_implementations<CR>", { desc = "Goto implementations" })
+		km.set("n", "<leader>gt", "<cmd>Telescope lsp_type_definitions<CR>", { desc = "Goto type definitions" })
+		km.set("n", "<leader>db", "<cmd>Telescope diagnostics bufnr=0<CR>", { desc = "Buffer diagnostics" })
 	end,
 }
