@@ -29,6 +29,7 @@ km("n", "<M-down>", ":resize -1<CR>", { desc = "Resize shorter" })
 km("n", "n", "nzz", { desc = "Center on search" })
 km("n", "N", "Nzz", { desc = "Center on search" })
 km("n", "<leader>W", ":lua vim.wo.wrap = not vim.wo.wrap<CR>", { desc = "Toggle word wrap" })
+km("n", "x", '"_x', { desc = "Delete character without copy" })
 
 km("i", "<M-k>", "<Esc>O", { desc = "Open to line above" })
 km("i", "<M-j>", "<Esc>o", { desc = "Open to line below" })
