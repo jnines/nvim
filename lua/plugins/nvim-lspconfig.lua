@@ -3,6 +3,7 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"saghen/blink.cmp",
+		"b0o/schemastore.nvim",
 		{ "antosha417/nvim-lsp-file-operations" },
 	},
 	config = function()
@@ -36,15 +37,63 @@ return {
 			lineFoldingOnly = true,
 		}
 
+		local schemas = require("schemastore")
 		local servers = {
 			bashls = {},
 			html = {},
 			ts_ls = {},
+			cssls = {},
+			tailwindcss = {},
+			graphql = {},
 			emmet_ls = {},
 			pyright = {},
-			jsonls = {},
-			yamlls = {},
+			jsonls = {
+				settings = {
+					json = {
+						schemas = schemas.json.schemas(),
+						validate = { enable = true },
+					},
+				},
+			},
+			yamlls = {
+				settings = {
+					yaml = {
+						schemaStore = { enable = false, url = "" },
+						schemas = schemas.yaml.schemas(),
+					},
+				},
+			},
+			lua_ls = {
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+						},
+						workspace = {
+							library = { vim.env.VIMRUNTIME },
+							checkThirdParty = false,
+						},
+						telemetry = {
+							enable = false,
+						},
+						completion = {
+							callSnipper = "Replace",
+						},
+					},
+				},
+			},
 			marksman = {},
+			gopls = {
+				settings = {
+					gopls = {
+						usePlaceholders = false,
+						analyses = {
+							unusedparams = true,
+						},
+					},
+				},
+			},
+			qmlls = { cmd = { "qmlls6" } },
 		}
 
 		for serv, cfg in pairs(servers) do

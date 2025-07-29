@@ -9,6 +9,8 @@ return {
 			formatters_by_ft = {
 				javascript = { "prettier" },
 				typescript = { "prettier" },
+				javascriptreact = { "prettier" },
+				typescriptreact = { "prettier" },
 				css = { "prettier" },
 				html = { "prettier" },
 				json = { "prettier" },
@@ -17,6 +19,9 @@ return {
 				bash = { "shfmt" },
 				sh = { "shfmt" },
 				zsh = { "shfmt" },
+				lua = { "stylua" },
+				golang = { "gofumpt" },
+				python = { "isort", "black" },
 			},
 
 			format_on_save = function(bufnr)

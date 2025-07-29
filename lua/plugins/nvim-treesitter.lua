@@ -7,6 +7,7 @@ return {
 		dependencies = {
 			"tree-sitter/tree-sitter-regex",
 			"nvim-treesitter/nvim-treesitter-context",
+			"OXY2DEV/markview.nvim",
 		},
 		config = function()
 			local treesitter = require("nvim-treesitter.configs")
@@ -25,14 +26,24 @@ return {
 				ensure_installed = {
 					"json",
 					"javascript",
+					"typescript",
+					"tsx",
 					"yaml",
 					"html",
+					"php",
+					"css",
 					"markdown",
 					"markdown_inline",
 					"bash",
+					"lua",
 					"vim",
+					"python",
 					"dockerfile",
 					"gitignore",
+					"go",
+					"qmljs",
+					"qmldir",
+					"query",
 				},
 				incremental_selection = {
 					enable = true,

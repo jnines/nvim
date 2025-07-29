@@ -24,6 +24,7 @@ return {
 			{ "<leader>g", group = "GoTo" },
 			{ "<leader>h", group = "Harpoon" },
 			{ "<leader>i", group = "Icons" },
+			{ "<leader>m", group = "Markdown" },
 			{ "<leader>q", "<cmd>xa<CR><cmd>qa<CR>", desc = "Quit" },
 			{ "<leader>r", group = "Rename" },
 			{ "<leader>s", group = "Splits" },

@@ -25,11 +25,18 @@ return {
 			ensure_installed = {
 				"bashls",
 				"html",
+				"ts_ls",
+				"cssls",
+				"tailwindcss",
+				"graphql",
 				"emmet_ls",
 				"pyright",
 				"jsonls",
 				"yamlls",
+				"lua_ls",
 				"marksman",
+				"gopls",
+				"taplo",
 			},
 		})
 
@@ -39,8 +46,14 @@ return {
 				"eslint",
 				"shfmt",
 				"jsonlint",
+				"stylua",
+				"isort",
+				"black",
 				"pylint",
 				"yamllint",
+				"markdownlint",
+				"golangci-lint",
+				"gofumpt",
 			},
 		})
 	end,
