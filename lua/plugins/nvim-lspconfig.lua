@@ -11,9 +11,6 @@ return {
     require('lsp-file-operations').setup()
 
     vim.diagnostic.config({
-      virtual_lines = {
-        current_line = true,
-      },
       signs = {
         text = {
           [vim.diagnostic.severity.ERROR] = ' ',
