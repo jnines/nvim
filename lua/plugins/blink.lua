@@ -100,7 +100,9 @@ return {
       keymap = {
         ['<CR>'] = { 'accept', 'fallback' },
         ['<Tab>'] = { 'select_next', 'fallback' },
+        ['Down'] = { 'select_next', 'fallback' },
         ['<S-Tab>'] = { 'select_prev', 'fallback' },
+        ['Up'] = { 'select_prev', 'fallback' },
         ['<C-k>'] = { 'scroll_documentation_up', 'fallback' },
         ['<C-j>'] = { 'scroll_documentation_down', 'fallback' },
         ['<C-e>'] = { 'cancel' },
