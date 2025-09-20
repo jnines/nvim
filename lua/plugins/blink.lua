@@ -59,10 +59,9 @@ return {
           border = 'rounded',
           winhighlight = 'Normal:Normal,FloatBorder:None,CursorLine:BlinkCmpMenuSelection,Search:None',
           draw = {
-            columns = {
-              { 'label', gap = 2, 'kind_icon' },
-              { 'src' },
-            },
+            padding = 2,
+            gap = 5,
+            columns = { { 'label' }, { 'kind_icon', gap = 2, 'kind' } },
             components = {
               label = {
                 text = function(ctx)
@@ -71,18 +70,6 @@ return {
                 highlight = function(ctx)
                   return require('colorful-menu').blink_components_highlight(ctx)
                 end,
-              },
-              src = {
-                text = function(ctx)
-                  local map = {
-                    ['lsp'] = '[]',
-                    ['path'] = '[󰉋]',
-                    ['snippets'] = '[]',
-                    ['buffer'] = '',
-                  }
-                  return map[ctx.item.source_id]
-                end,
-                width = { max = 50 },
               },
             },
           },
@@ -103,6 +90,7 @@ return {
           return 0
         end,
       },
+
       keymap = {
         ['<CR>'] = { 'accept', 'fallback' },
         ['<Tab>'] = { 'select_next', 'fallback' },
