@@ -11,6 +11,13 @@ return {
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     blink.setup({
+      enabled = function()
+        local ft = vim.bo[0].filetype
+        if ft == 'TelescopePrompt' or ft == 'minifiles' or ft == 'snacks_picker_input' then
+          return false
+        end
+        return true
+      end,
       snippets = { preset = 'luasnip' },
       sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer' },
@@ -20,7 +27,6 @@ return {
             score_offset = 4,
           },
           lsp = {
-            min_keyword_length = 2,
             score_offset = 3,
           },
           path = {

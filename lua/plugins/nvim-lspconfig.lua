@@ -36,7 +36,9 @@ return {
 
     local schemas = require('schemastore')
     local servers = {
-      bashls = {},
+      bashls = {
+        filetypes = { 'sh', 'zsh' },
+      },
       html = {},
       ts_ls = {},
       cssls = {},
