@@ -10,13 +10,14 @@ return {
     local blink = require('blink.cmp')
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
+    vim.g.blinktoggle = true
     blink.setup({
       enabled = function()
         local ft = vim.bo[0].filetype
         if ft == 'TelescopePrompt' or ft == 'minifiles' or ft == 'snacks_picker_input' then
           return false
         end
-        return true
+        return vim.g.blinktoggle
       end,
       snippets = { preset = 'luasnip' },
       sources = {
