@@ -10,7 +10,7 @@ return {
       'OXY2DEV/markview.nvim',
     },
     config = function()
-      local treesitter = require('nvim-treesitter.configs')
+      local treesitter = require('nvim-treesitter')
 
       local tsctx = require('treesitter-context')
 
