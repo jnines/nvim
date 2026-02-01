@@ -4,24 +4,6 @@ return {
   config = function()
     local lualine = require('lualine')
     local lazy_status = require('lazy.status')
-    local harpoon = require('harpoon')
-    local harpoon_line = function()
-      local total_marks = harpoon:list():length()
-
-      if total_marks == 0 then
-        return ''
-      end
-
-      local curr_mark = '—'
-
-      local mark_idx = harpoon:list():get()
-      if mark_idx ~= nil then
-        curr_mark = tostring(mark_idx)
-      end
-
-      return string.format('⇁ %s/%d', curr_mark, total_marks)
-    end
-
     lualine.setup({
       options = {
         theme = 'auto',
@@ -57,14 +39,6 @@ return {
           { 'fileformat' },
           { 'filetype' },
         },
-      },
-      winbar = {
-        lualine_a = { { 'filename', path = 1 }, harpoon_line },
-        lualine_z = { 'hostname' },
-      },
-      inactive_winbar = {
-        lualine_a = { { 'filename', path = 1 }, harpoon_line },
-        lualine_z = { 'hostname' },
       },
       extensions = { 'lazy' },
     })
