@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 return {
   'OXY2DEV/markview.nvim',
   lazy = false,
