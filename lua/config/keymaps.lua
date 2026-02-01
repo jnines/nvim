@@ -5,7 +5,6 @@ local km = vim.keymap.set
 
 km({ 'n', 'i', 'v' }, '<C-q>', vim.cmd.q, { desc = 'exit' })
 km({ 'n', 'i', 'v' }, '<C-s>', '<Esc>:w<CR>', { desc = 'Save Buffer' })
-km({ 'n', 'i', 'v' }, '<C-z>', '<Esc>:wq<CR>', { desc = 'Save Buffer and Exit' })
 
 km({ 'n', 'x', 'o' }, 'H', '^', { desc = 'Start of line' })
 km({ 'n', 'x', 'o' }, 'L', 'g_', { desc = 'End of line' })
@@ -21,7 +20,6 @@ km('n', '<leader>xo', vim.cmd.so, { desc = 'Source file' })
 km('n', '<leader>xp', ':Lazy reload ', { desc = 'Reload plugin' })
 km('n', '<leader>n', vim.cmd.bn, { desc = 'Buffer next' })
 km('n', '<leader>p', vim.cmd.bp, { desc = 'Buffer previous' })
-km('n', '<leader>bd', vim.cmd.bd, { desc = 'Buffer delete' })
 km('n', '<M-left>', ':vertical resize +1<CR>', { desc = 'Resize wider' })
 km('n', '<M-right>', ':vertical resize -1<CR>', { desc = 'Resize narrower' })
 km('n', '<M-up>', ':resize +1<CR>', { desc = 'Resize taller' })
@@ -42,7 +40,6 @@ km('i', '[', '[<C-g>u', { desc = 'Create undo breakpoint at [' })
 
 km('x', 'p', [["_dP]], { desc = 'Keep copied text in register' })
 
-km('n', '<leader>gD', vim.lsp.buf.declaration, { desc = 'Goto declaration' })
 km({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code actions' })
 km('n', '<leader>rn', vim.lsp.buf.rename, { desc = 'Rename' })
 km('v', '<leader>rs', 'y:%s/<C-r>"//<left>', { desc = 'Rename section' })
@@ -52,6 +49,9 @@ km('n', '<leader>xx', ':LspRestart<CR>', { desc = 'Restart LSP' })
 km('n', '<leader>L', '<ESC>wbywofmt.Println()<ESC>hp', { desc = 'Log under cursor' })
 km('n', '<leader>ge', 'oif err != nil {<CR>}<ESC>Oreturn ', { desc = 'Go Err' })
 km('n', '<leader>L', '<ESC>wbywoconsole.log()<ESC>hp', { desc = 'Log under cursor' })
+
+km('n', '<leader>/', ':normal gcc<CR>', { desc = 'Line comment' })
+km('v', '<leader>/', '<ESC>:normal gvgc<CR>', { desc = 'Block comment' })
 
 km('n', '[d', function()
   vim.diagnostic.jump({ count = -1, float = true })
