@@ -109,17 +109,10 @@ return {
         end,
       },
       sidebar = {
-        filetype = { 'NvimTree' },
+        filetype = { 'snacks_layout_box' },
         components = {
           {
-            text = function(_)
-              return '   File Exporer'
-            end,
-            fg = yellow,
-            bg = function()
-              return get_hex('NvimTreeNormal', 'bg')
-            end,
-            bold = true,
+            text = '',
           },
         },
       },
