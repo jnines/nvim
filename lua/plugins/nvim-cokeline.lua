@@ -1,5 +1,6 @@
 return {
   'willothy/nvim-cokeline',
+  dependencies = { { 'nvim-lua/plenary.nvim' }, { 'nvim-tree/nvim-web-devicons' } },
   config = function()
     local cokeline = require('cokeline')
     local mappings = require('cokeline/mappings')
