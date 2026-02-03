@@ -178,6 +178,18 @@ return {
         Snacks.toggle.treesitter():map('<leader>xT')
         Snacks.toggle.inlay_hints():map('<leader>xh')
         Snacks.toggle.dim():map('<leader>xd')
+        Snacks.toggle
+          .new({
+            id = 'blink_cmp_toggle',
+            name = 'Blink.cmp',
+            get = function()
+              return vim.g.blinktoggle
+            end,
+            set = function()
+              vim.g.blinktoggle = not vim.g.blinktoggle
+            end,
+          })
+          :map('<leader>xc')
       end,
     })
     -- Kill snacks explorer when quitting out

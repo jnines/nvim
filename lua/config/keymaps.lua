@@ -59,14 +59,3 @@ end, { desc = 'Go to previous diagnostic message' })
 km('n', ']d', function()
   vim.diagnostic.jump({ count = 1, float = true })
 end, { desc = 'Go to next diagnostic message' })
-
-km('n', '<leader>xc', function()
-  local state
-  vim.g.blinktoggle = not vim.g.blinktoggle
-  if vim.g.blinktoggle then
-    state = 'Enabled'
-  else
-    state = 'Disabled'
-  end
-  print('Blink.cmp', state)
-end, { desc = 'Toggle Blink' })
