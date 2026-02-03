@@ -30,7 +30,22 @@ return {
       matcher = {
         frecency = true,
       },
-      sources = { explorer = { layout = { layout = { width = 35 } } } },
+      sources = {
+        explorer = {
+          layout = {
+            layout = {
+              width = 35,
+            },
+          },
+        },
+      },
+      win = {
+        list = {
+          keys = {
+            ['<c-q>'] = { 'close', mode = 'n' },
+          },
+        },
+      },
     },
     quickfile = { enabled = true },
     scope = { enabled = true },
