@@ -1,23 +1,14 @@
 ---@diagnostic disable: missing-fields
 return {
-  'folke/noice.nvim',
-  event = 'VeryLazy',
-  opts = {},
-  dependencies = {
-    'MunifTanjim/nui.nvim',
-    'rcarriga/nvim-notify',
-  },
-  config = function()
-    local noice = require('noice')
-    local notify = require('notify')
+  {
+    'folke/noice.nvim',
+    event = 'VeryLazy',
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+      --'rcarriga/nvim-notify' below
+    },
+    opts = {
 
-    notify.setup({
-      render = 'compact',
-      stages = 'static',
-      fps = 1,
-    })
-
-    noice.setup({
       lsp = {
         progress = { enabled = false },
         -- use Treesitter
@@ -34,6 +25,14 @@ return {
         inc_rename = false,
         lsp_doc_border = false,
       },
-    })
-  end,
+    },
+  },
+  {
+    'rcarriga/nvim-notify',
+    opts = {
+      render = 'compact',
+      stages = 'static',
+      fps = 1,
+    },
+  },
 }
