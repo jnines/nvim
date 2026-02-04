@@ -1,15 +1,15 @@
+---@diagnostic disable: missing-fields
 return {
   'lewis6991/gitsigns.nvim',
   event = { 'BufReadPre', 'BufNewFile' },
-
-  config = function()
-    local gs = require('gitsigns')
-
-    gs.setup({
-      numhl = true,
-      signcolumn = false,
-    })
-    vim.keymap.set('n', '<leader>gb', gs.toggle_current_line_blame, { desc = 'Git blame toggle' })
-    vim.keymap.set('n', '<leader>gp', gs.preview_hunk, { desc = 'Git preview hunk' })
-  end,
+  ---@module 'Gitsigns'
+  --- @type Gitsigns.Config
+  opts = {
+    numhl = true,
+    signcolumn = false,
+  },
+  keys = {
+    { '<leader>gb', '<CMD>:Gitsigns toggle_current_line_blame<CR>', desc = 'Git blame toggle' },
+    { '<leader>gp', '<CMD>:Gitsigns preview_hunk<CR>', desc = 'Git preview hunk' },
+  },
 }
