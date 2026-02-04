@@ -45,7 +45,8 @@ return {
       function()
         require('conform').format({ timeout_ms = 1000, lsp_fallback = true, async = false })
       end,
-      { desc = 'Format file' },
+      desc = 'Format file',
+      mode = { 'n' },
     },
   },
 }
