@@ -1,8 +1,1 @@
-return {
-  'echasnovski/mini.pairs',
-  version = '*',
-  event = 'VeryLazy',
-  config = function()
-    require('mini.pairs').setup({})
-  end,
-}
+return { 'nvim-mini/mini.pairs', version = false }
