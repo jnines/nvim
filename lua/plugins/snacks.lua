@@ -65,14 +65,10 @@ return {
       function()
         Snacks.picker.buffers({
           focus = 'list',
-          win = {
-            input = {
-              keys = {
-                ['d'] = 'bufdelete'
-              },
-            },
-            list = { keys = { ['d'] = 'bufdelete' } },
+          win = { input = { keys = { ['d'] = 'bufdelete' },
           },
+            list = { keys = { ['d'] = 'bufdelete' } },
+            },
         })
       end,
       desc = "Buffers"
