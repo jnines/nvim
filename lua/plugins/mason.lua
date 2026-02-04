@@ -1,17 +1,7 @@
 return {
-  'williamboman/mason.nvim',
-  dependencies = {
-    'williamboman/mason-lspconfig.nvim',
-    'WhoIsSethDaniel/mason-tool-installer.nvim',
-  },
-  config = function()
-    local mason = require('mason')
-
-    local mason_lspconfig = require('mason-lspconfig')
-
-    local mason_tool_installer = require('mason-tool-installer')
-
-    mason.setup({
+  {
+    'williamboman/mason.nvim',
+    opts = {
       ui = {
         icons = {
           package_installed = '✓',
@@ -19,9 +9,14 @@ return {
           package_uninstalled = '✗',
         },
       },
-    })
-
-    mason_lspconfig.setup({
+    },
+    keys = {
+      { '<leader>M', '<CMD>Mason<CR>', desc = 'Mason', mode = { 'n' } },
+    },
+  },
+  {
+    'williamboman/mason-lspconfig.nvim',
+    opts = {
       ensure_installed = {
         'bashls',
         'html',
@@ -38,9 +33,11 @@ return {
         'gopls',
         'taplo',
       },
-    })
-
-    mason_tool_installer.setup({
+    },
+  },
+  {
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    opts = {
       ensure_installed = {
         'prettier',
         'eslint',
@@ -55,7 +52,6 @@ return {
         'golangci-lint',
         'gofumpt',
       },
-    })
-  end,
-  vim.keymap.set('n', '<leader>M', '<cmd>Mason<CR>', { desc = 'Mason' }),
+    },
+  },
 }
