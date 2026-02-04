@@ -1,5 +1,4 @@
 return {
-  'echasnovski/mini.ai',
+  'nvim-mini/mini.ai',
   version = false,
-  opts = {},
 }
