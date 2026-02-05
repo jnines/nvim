@@ -4,7 +4,6 @@ return {
   dependencies = {
     'saghen/blink.cmp',
     'b0o/schemastore.nvim',
-    'antosha417/nvim-lsp-file-operations',
   },
 
   init = function()
@@ -22,7 +21,6 @@ return {
 
   config = function()
     local blink = require('blink.cmp')
-    require('lsp-file-operations').setup()
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = vim.tbl_deep_extend('force', capabilities, blink.get_lsp_capabilities())
