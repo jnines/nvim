@@ -2,14 +2,12 @@ return {
   'hedyhli/outline.nvim',
   lazy = true,
   cmd = { 'Outline', 'OutlineOpen' },
-  config = function()
-    local outline = require('outline')
-
-    outline.setup({
-      preview_window = {
-        auto_preview = true,
-      },
-    })
-  end,
-  vim.keymap.set('n', '<leader>o', '<cmd>Outline<cr>', { desc = 'Toggle outline' }),
+  opts = {
+    preview_window = {
+      auto_preview = true,
+    },
+  },
+  keys = {
+    { '<leader>o', '<CMD>Outline<CR>', desc = 'Toggle Outline', mode = { 'n' } },
+  },
 }
