@@ -2,10 +2,8 @@ return {
   'mfussenegger/nvim-lint',
   lazy = true,
   event = { 'BufReadPre', 'BufNewFile' },
-  config = function()
-    local lint = require('lint')
-
-    lint.linters_by_ft = {
+  opts = {
+    linters_by_ft = {
       markdown = { 'markdownlint' },
       php = { 'php' },
       yaml = { 'yamllint' },
@@ -18,28 +16,39 @@ return {
       go = { 'golangcilint' },
       python = { 'flake8' },
       lua = { 'luacheck' },
-    }
+    },
 
-    lint.linters.luacheck.args = {
-      '--formatter',
-      'plain',
-      '--codes',
-      '--ranges',
-      '--globals = vim',
-      '-',
-    }
+    linter_args = {
+      luacheck_args = {
+        '--formatter',
+        'plain',
+        '--codes',
+        '--ranges',
+        '--globals = vim',
+        '-',
+      },
+    },
+  },
 
-    local lint_aug = vim.api.nvim_create_augroup('lint', { clear = true })
+  config = function(_, opts)
+    local lint = require('lint')
+    lint.linters_by_ft = opts.linters_by_ft
+    lint.linters.luacheck.args = opts.luacheck_args
 
     vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost', 'InsertLeave' }, {
-      group = lint_aug,
       callback = function()
-        lint.try_lint()
+        return require('lint').try_lint()
       end,
     })
-
-    vim.keymap.set('n', '<leader>.', function()
-      lint.try_lint()
-    end, { desc = 'Lint current file' })
   end,
+  keys = {
+    {
+      '<leader>.',
+      function()
+        return require('lint').try_lint()
+      end,
+      desc = 'Lint current file',
+      mode = { 'n' },
+    },
+  },
 }
