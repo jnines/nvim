@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 return {
   'nvim-treesitter/nvim-treesitter',
   branch = 'main',
@@ -14,25 +15,10 @@ return {
     indent = { enable = true },
     ensure_installed = {
       'json',
-      'javascript',
-      'typescript',
-      'tsx',
       'yaml',
-      'html',
-      'php',
-      'css',
-      'markdown',
-      'markdown_inline',
       'bash',
-      'lua',
       'vim',
-      'python',
       'dockerfile',
-      'gitignore',
-      'go',
-      'qmljs',
-      'qmldir',
-      'query',
     },
     incremental_selection = {
       enable = true,
