@@ -5,21 +5,9 @@ return {
   ---@module "conform"
   opts = {
     formatters_by_ft = {
-      javascript = { 'prettier' },
-      typescript = { 'prettier' },
-      javascriptreact = { 'prettier' },
-      typescriptreact = { 'prettier' },
-      css = { 'prettier' },
-      html = { 'prettier' },
-      json = { 'prettier' },
-      yaml = { 'prettier' },
-      markdown = { 'prettier' },
       bash = { 'shfmt' },
       sh = { 'shfmt' },
       zsh = { 'shfmt' },
-      lua = { 'stylua' },
-      golang = { 'gofumpt' },
-      python = { 'isort', 'black' },
     },
 
     format_on_save = function(bufnr)
@@ -30,9 +18,6 @@ return {
     end,
 
     formatters = {
-      prettier = {
-        prepend_args = { '--single-quote', '--jsx-single-quote' },
-      },
       shfmt = {
         args = { '-bn' },
       },
