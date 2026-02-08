@@ -4,29 +4,7 @@ return {
   event = { 'BufReadPre', 'BufNewFile' },
   opts = {
     linters_by_ft = {
-      markdown = { 'markdownlint' },
-      php = { 'php' },
-      yaml = { 'yamllint' },
-      javascript = { 'eslint' },
-      json = { 'jsonlint' },
-      typescript = { 'eslint' },
-      javascriptreact = { 'eslint' },
-      typescriptreact = { 'eslint' },
       bash = { 'shellcheck' },
-      go = { 'golangcilint' },
-      python = { 'flake8' },
-      lua = { 'luacheck' },
-    },
-
-    linter_args = {
-      luacheck_args = {
-        '--formatter',
-        'plain',
-        '--codes',
-        '--ranges',
-        '--globals = vim',
-        '-',
-      },
     },
   },
 
