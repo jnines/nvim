@@ -113,6 +113,7 @@ function M.opts()
   }
 
   return {
+    show_if_buffers_are_at_least = 0,
     default_hl = {
       fg = function(buffer)
         return buffer.is_focused and get_hex('Directory', 'fg') or get_hex('Comment', 'fg')
