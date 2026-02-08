@@ -1,7 +1,31 @@
 local M = {}
-local schemas = require('schemastore')
+M.core = {}
+M.lite = {
+  bashls = {},
 
-M.servers = {
+  jsonls = {
+    settings = {
+      json = {
+        schemas = function()
+          require('schemastore').json.schemas()
+        end,
+        validate = { enable = true },
+      },
+    },
+  },
+
+  yamlls = {
+    settings = {
+      yaml = {
+        schemaStore = { enable = false, url = '' },
+        schemas = function()
+          require('schemastore').yaml.schemas()
+        end,
+      },
+    },
+  },
+}
+M.full = {
   bashls = {},
   html = {},
   ts_ls = {},
@@ -14,7 +38,9 @@ M.servers = {
   jsonls = {
     settings = {
       json = {
-        schemas = schemas.json.schemas(),
+        schemas = function()
+          require('schemastore').json.schemas()
+        end,
         validate = { enable = true },
       },
     },
@@ -24,7 +50,9 @@ M.servers = {
     settings = {
       yaml = {
         schemaStore = { enable = false, url = '' },
-        schemas = schemas.yaml.schemas(),
+        schemas = function()
+          require('schemastore').yaml.schemas()
+        end,
       },
     },
   },
