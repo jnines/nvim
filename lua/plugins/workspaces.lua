@@ -1,5 +1,6 @@
 return {
   'natecraddock/workspaces.nvim',
+  enabled = false,
 
   opts = function()
     return {

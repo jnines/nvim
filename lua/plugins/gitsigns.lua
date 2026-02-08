@@ -1,9 +1,9 @@
 ---@diagnostic disable: missing-fields
 return {
   'lewis6991/gitsigns.nvim',
+  enabled = false,
   event = { 'BufReadPre', 'BufNewFile' },
   ---@module 'Gitsigns'
-  ---@type Gitsigns.Config
   opts = {
     numhl = true,
     signcolumn = false,

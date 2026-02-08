@@ -2,6 +2,7 @@ local M = {}
 
 M.spec = {
   'willothy/nvim-cokeline',
+  enabled = false,
   lazy = false,
   dependencies = {
     'nvim-lua/plenary.nvim',

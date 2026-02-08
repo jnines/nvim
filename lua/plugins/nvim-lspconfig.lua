@@ -1,5 +1,6 @@
 return {
   'neovim/nvim-lspconfig',
+  enabled = false,
   event = { 'BufReadPre', 'BufNewFile' },
   dependencies = {
     'saghen/blink.cmp',
@@ -29,7 +30,8 @@ return {
       lineFoldingOnly = true,
     }
 
-    local servers = require('util.lsp_servers').servers
+    local profile = require('util.profiles').lsp_spec()
+    local servers = require('specs.lsp_servers')[profile]
 
     for name, cfg in pairs(servers) do
       cfg.capabilities = vim.tbl_deep_extend('force', {}, capabilities, cfg.capabilities or {})
