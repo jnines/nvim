@@ -19,7 +19,6 @@ return {
         { '<leader>d', group = 'Diagnostics' },
         { '<leader>f', group = 'File' },
         { '<leader>g', group = 'GoTo' },
-        { '<leader>m', group = 'Markdown' },
         { '<leader>q', '<cmd>xa<CR><cmd>qa<CR>', desc = 'Quit' },
         { '<leader>r', group = 'Rename' },
         { '<leader>s', group = 'Search' },
