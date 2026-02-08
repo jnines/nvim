@@ -53,3 +53,8 @@ o.winborder = 'rounded'
 o.iskeyword:append('-')
 o.spelllang = 'en_us'
 o.spell = true
+
+o.foldenable = true
+o.foldlevel = 99
+o.foldmethod = 'expr'
+o.foldexpr = 'v:lua.vim.lsp.foldexpr()'
