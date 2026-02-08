@@ -3,7 +3,6 @@ return {
   lazy = true,
   event = { 'BufReadPre', 'BufNewFile' },
   ---@module "conform"
-  ---@type conform.setupOpts
   opts = {
     formatters_by_ft = {
       javascript = { 'prettier' },
