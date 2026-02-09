@@ -3,7 +3,7 @@
 Probably shouldn't use this unless you know enough to tweak to your liking.
 
 ```bash
-git clone https://github.com/jnines/nvim "$HOME"/.config/
+git clone https://github.com/jnines/nvim "$HOME"/.config/nvim
 ```
 
 This will clone the basic/core config.  
