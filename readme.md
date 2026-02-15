@@ -1,5 +1,9 @@
 # My Neovim setup
 
+## No longer maintained
+
+Now in [dotfiles](https://github.com/jnines/dotfiles)
+
 Probably shouldn't use this unless you know enough to tweak to your liking.
 
 ```bash
